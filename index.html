@@ -8,46 +8,102 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">park<span>IT</span></div>
-    <nav class="nav-actions">
-      <a href="#" class="btn">Demo</a>
-      <a href="#" class="btn ghost">Docs</a>
+    <div class="site-brand">
+      <h1>parkIT — demo</h1>
+      <p class="tag">Investor / product demo · responsive preview</p>
+    </div>
+    <nav class="top-nav">
+      <a href="#" class="btn">Demo Home</a>
+      <a href="#" class="btn">Features</a>
+      <a href="#" class="btn">Operator</a>
     </nav>
   </header>
 
   <main class="container">
     <section class="hero">
       <div class="hero-left">
-        <h1>ParkIT — Mobile UX Gallery</h1>
-        <p>Investor demo — responsive gallery of app screens. Use this static site to present the UI to stakeholders.</p>
-        <a class="primary" href="#gallery">View Screens</a>
-      </div>
-      <div class="hero-right">
-        <div class="phone-mock">
-          <img src="assets/ParkIT_1.png" alt="ParkIT mock" />
+        <h2>Beautiful mobile UI previews</h2>
+        <p>Interactive investor demo — full responsive landing that showcases app screens and operator dashboards.</p>
+        <div class="cta-row">
+          <a class="cta primary" href="#screens">View Screens</a>
+          <a class="cta" href="#operator">Operator</a>
         </div>
       </div>
-    </section>
-
-    <section id="gallery" class="gallery">
-      <h2>App Screens (High-fidelity previews)</h2>
-      <div class="grid">
-        <figure class="card"><img src="assets/ParkIT_1.png" alt="screen1"/><figcaption>Home / Landing</figcaption></figure>
-        <figure class="card"><img src="assets/ParkIT_2.png" alt="screen2"/><figcaption>Search / Details</figcaption></figure>
+      <div class="hero-right">
+        <!-- responsive picture: fallback to PNG; add more sizes if you have them -->
+        <picture>
+          <source media="(max-width:640px)" srcset="assets/ParkIT_2.png">
+          <img src="assets/ParkIT_1.png" alt="ParkIT screens overview" loading="lazy" />
+        </picture>
       </div>
     </section>
 
-    <section class="cta">
-      <div>
-        <h3>Download & Deploy</h3>
-        <p>Use the ZIP to upload to GitHub or Vercel. Steps are in the README file.</p>
-      </div>
-      <div>
-        <a class="primary" href="parkit_demo.zip" download>Download ZIP</a>
-      </div>
+    <section id="screens" class="screens-grid">
+      <!-- Card 1 -->
+      <article class="card">
+        <h3>Home / Landing</h3>
+        <div class="card-media">
+          <picture>
+            <source media="(max-width:640px)" srcset="assets/ParkIT_2.png">
+            <img src="assets/ParkIT_1.png" alt="Home / Landing" loading="lazy" />
+          </picture>
+        </div>
+        <p class="muted">Map-first home, reserve & start session flows.</p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <h3>Search Results</h3>
+        <div class="card-media">
+          <img src="assets/ParkIT_2.png" alt="Search Results" loading="lazy" />
+        </div>
+        <p class="muted">List & filter parking lots by availability and ratings.</p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <h3>Active Reservation</h3>
+        <div class="card-media">
+          <img src="assets/ParkIT_1.png" alt="Active Reservation" loading="lazy" />
+        </div>
+        <p class="muted">Active session, booking history and operator dashboard previews.</p>
+      </article>
+
+      <!-- More cards: duplicate / adapt as needed -->
+      <article class="card">
+        <h3>Checkout / Session</h3>
+        <div class="card-media">
+          <img src="assets/ParkIT_2.png" alt="Checkout" loading="lazy" />
+        </div>
+        <p class="muted">Quick checkout flow and session timer.</p>
+      </article>
+
+      <article class="card">
+        <h3>Operator Dashboard</h3>
+        <div class="card-media">
+          <img src="assets/ParkIT_1.png" alt="Operator dashboard" loading="lazy" />
+        </div>
+        <p class="muted">KPI tiles and booking analytics for operators.</p>
+      </article>
+
+      <article class="card">
+        <h3>Booking History</h3>
+        <div class="card-media">
+          <img src="assets/ParkIT_2.png" alt="Booking history" loading="lazy" />
+        </div>
+        <p class="muted">User reservations and past sessions.</p>
+      </article>
     </section>
+
+    <section id="operator" class="operator-cta">
+      <h2>Operator Interface</h2>
+      <p>Demo-ready operator dashboard for lot owners and parking managers.</p>
+      <a class="cta primary" href="#">Request Demo Access</a>
+    </section>
+
+    <footer class="site-footer">
+      <small>ParkIT demo — images are mockups. © {Your Name}</small>
+    </footer>
   </main>
-
-  <footer class="site-footer">© ParkIT demo • Built for investor preview</footer>
 </body>
 </html>
